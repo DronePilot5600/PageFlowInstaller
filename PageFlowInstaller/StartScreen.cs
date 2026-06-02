@@ -11,5 +11,12 @@ namespace PageFlowInstaller
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GettingInfo nextstep = new GettingInfo();
+            nextstep.Show();
+            this.Hide();
+        }
     }
 }

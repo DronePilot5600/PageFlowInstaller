@@ -72,7 +72,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 158);
+            label2.Location = new Point(12, 149);
             label2.Name = "label2";
             label2.Size = new Size(559, 15);
             label2.TabIndex = 3;
@@ -90,6 +90,7 @@
             button1.TabIndex = 4;
             button1.Text = "weiter";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // StartScreen
             // 
@@ -102,6 +103,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(lbl_Header);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "StartScreen";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

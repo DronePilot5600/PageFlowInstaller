@@ -37,10 +37,11 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            tb_con = new TextBox();
+            tb_dbpwd = new TextBox();
+            tb_dbuser = new TextBox();
+            bt_proceed = new Button();
+            cbk_sspi = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -70,7 +71,7 @@
             pictureBox2.BackColor = Color.FromArgb(30, 40, 43);
             pictureBox2.Location = new Point(12, 111);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(776, 217);
+            pictureBox2.Size = new Size(776, 222);
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
@@ -141,41 +142,55 @@
             label6.TabIndex = 10;
             label6.Text = "Datenbankanbindung";
             // 
-            // textBox1
+            // tb_con
             // 
-            textBox1.BackColor = Color.FromArgb(21, 28, 30);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(146, 187);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(631, 16);
-            textBox1.TabIndex = 11;
+            tb_con.BackColor = Color.FromArgb(21, 28, 30);
+            tb_con.BorderStyle = BorderStyle.None;
+            tb_con.Location = new Point(146, 187);
+            tb_con.Name = "tb_con";
+            tb_con.Size = new Size(631, 16);
+            tb_con.TabIndex = 11;
             // 
-            // textBox2
+            // tb_dbpwd
             // 
-            textBox2.BackColor = Color.FromArgb(21, 28, 30);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(146, 264);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(631, 16);
-            textBox2.TabIndex = 12;
+            tb_dbpwd.BackColor = Color.FromArgb(21, 28, 30);
+            tb_dbpwd.BorderStyle = BorderStyle.None;
+            tb_dbpwd.Location = new Point(146, 264);
+            tb_dbpwd.Name = "tb_dbpwd";
+            tb_dbpwd.Size = new Size(631, 16);
+            tb_dbpwd.TabIndex = 12;
             // 
-            // textBox3
+            // tb_dbuser
             // 
-            textBox3.BackColor = Color.FromArgb(21, 28, 30);
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(146, 239);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(631, 16);
-            textBox3.TabIndex = 13;
+            tb_dbuser.BackColor = Color.FromArgb(21, 28, 30);
+            tb_dbuser.BorderStyle = BorderStyle.None;
+            tb_dbuser.Location = new Point(146, 239);
+            tb_dbuser.Name = "tb_dbuser";
+            tb_dbuser.Size = new Size(631, 16);
+            tb_dbuser.TabIndex = 13;
             // 
-            // textBox4
+            // bt_proceed
             // 
-            textBox4.BackColor = Color.FromArgb(21, 28, 30);
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(146, 215);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(631, 16);
-            textBox4.TabIndex = 14;
+            bt_proceed.BackColor = Color.FromArgb(26, 186, 84);
+            bt_proceed.FlatAppearance.BorderColor = Color.FromArgb(26, 186, 84);
+            bt_proceed.FlatStyle = FlatStyle.Flat;
+            bt_proceed.ForeColor = Color.White;
+            bt_proceed.Location = new Point(702, 295);
+            bt_proceed.Name = "bt_proceed";
+            bt_proceed.Size = new Size(75, 23);
+            bt_proceed.TabIndex = 15;
+            bt_proceed.Text = "weiter";
+            bt_proceed.UseVisualStyleBackColor = false;
+            bt_proceed.Click += bt_proceed_Click;
+            // 
+            // cbk_sspi
+            // 
+            cbk_sspi.AutoSize = true;
+            cbk_sspi.Location = new Point(149, 217);
+            cbk_sspi.Name = "cbk_sspi";
+            cbk_sspi.Size = new Size(15, 14);
+            cbk_sspi.TabIndex = 16;
+            cbk_sspi.UseVisualStyleBackColor = true;
             // 
             // GettingInfo
             // 
@@ -183,10 +198,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 28, 30);
             ClientSize = new Size(800, 345);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(cbk_sspi);
+            Controls.Add(bt_proceed);
+            Controls.Add(tb_dbuser);
+            Controls.Add(tb_dbpwd);
+            Controls.Add(tb_con);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -197,6 +213,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(lbl_Header);
             ForeColor = Color.White;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "GettingInfo";
             Text = "GettingInfo";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -216,9 +233,10 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox tb_con;
+        private TextBox tb_dbpwd;
+        private TextBox tb_dbuser;
+        private Button bt_proceed;
+        private CheckBox cbk_sspi;
     }
 }
