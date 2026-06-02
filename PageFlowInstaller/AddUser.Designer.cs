@@ -36,8 +36,8 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            tb_pwd = new TextBox();
+            tb_pwd_rep = new TextBox();
             label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -55,6 +55,7 @@
             button1.TabIndex = 19;
             button1.Text = "weiter";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox2
             // 
@@ -127,23 +128,23 @@
             label3.TabIndex = 23;
             label3.Text = "Passwort:";
             // 
-            // textBox1
+            // tb_pwd
             // 
-            textBox1.BackColor = Color.FromArgb(21, 28, 30);
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(137, 202);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(640, 16);
-            textBox1.TabIndex = 24;
+            tb_pwd.BackColor = Color.FromArgb(21, 28, 30);
+            tb_pwd.BorderStyle = BorderStyle.None;
+            tb_pwd.Location = new Point(137, 202);
+            tb_pwd.Name = "tb_pwd";
+            tb_pwd.Size = new Size(640, 16);
+            tb_pwd.TabIndex = 24;
             // 
-            // textBox2
+            // tb_pwd_rep
             // 
-            textBox2.BackColor = Color.FromArgb(21, 28, 30);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(137, 224);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(640, 16);
-            textBox2.TabIndex = 26;
+            tb_pwd_rep.BackColor = Color.FromArgb(21, 28, 30);
+            tb_pwd_rep.BorderStyle = BorderStyle.None;
+            tb_pwd_rep.Location = new Point(137, 224);
+            tb_pwd_rep.Name = "tb_pwd_rep";
+            tb_pwd_rep.Size = new Size(640, 16);
+            tb_pwd_rep.TabIndex = 26;
             // 
             // label4
             // 
@@ -161,9 +162,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 28, 30);
             ClientSize = new Size(800, 347);
-            Controls.Add(textBox2);
+            Controls.Add(tb_pwd_rep);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(tb_pwd);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -191,8 +192,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox tb_pwd;
+        private TextBox tb_pwd_rep;
         private Label label4;
     }
 }

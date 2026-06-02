@@ -45,6 +45,14 @@ namespace PageFlowInstaller
 
             else
             {
+                Debug.WriteLine("Data Source=localhost;Initial Catalog=" + db_name + ";Integrated Security=" + sspi + ";User ID=" + db_user + ";Password=" + db_pwd + ";Trust Server Certificate=False");
+                if(SqlCommunication.TestConnection("Data Source="+db_name+";Initial Catalog = Master; Integrated Security=" + sspi + ";User ID=" + db_user + ";Password=" + db_pwd + ";Encrypt = false") == false)
+                {
+                    MessageBox.Show("Verbindung zur Datenbank konnte nicht hergestellt werden. Bitte überprüfen Sie Ihre Eingaben.");
+                }
+
+
+
                 using (StreamWriter sw = new StreamWriter(FilePath, false))
                 {
                     sw.WriteLine("db_name=" + db_name);
