@@ -132,6 +132,7 @@
             // 
             tb_pwd.BackColor = Color.FromArgb(21, 28, 30);
             tb_pwd.BorderStyle = BorderStyle.None;
+            tb_pwd.ForeColor = Color.FromArgb(0, 15, 255, 255);
             tb_pwd.Location = new Point(137, 202);
             tb_pwd.Name = "tb_pwd";
             tb_pwd.Size = new Size(640, 16);
@@ -141,6 +142,7 @@
             // 
             tb_pwd_rep.BackColor = Color.FromArgb(21, 28, 30);
             tb_pwd_rep.BorderStyle = BorderStyle.None;
+            tb_pwd_rep.ForeColor = Color.FromArgb(0, 15, 255, 255);
             tb_pwd_rep.Location = new Point(137, 224);
             tb_pwd_rep.Name = "tb_pwd_rep";
             tb_pwd_rep.Size = new Size(640, 16);

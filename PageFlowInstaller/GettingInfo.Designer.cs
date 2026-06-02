@@ -146,6 +146,7 @@
             // 
             tb_con.BackColor = Color.FromArgb(21, 28, 30);
             tb_con.BorderStyle = BorderStyle.None;
+            tb_con.ForeColor = Color.FromArgb(0, 15, 255, 255);
             tb_con.Location = new Point(146, 187);
             tb_con.Name = "tb_con";
             tb_con.Size = new Size(631, 16);
@@ -155,6 +156,7 @@
             // 
             tb_dbpwd.BackColor = Color.FromArgb(21, 28, 30);
             tb_dbpwd.BorderStyle = BorderStyle.None;
+            tb_dbpwd.ForeColor = Color.FromArgb(0, 15, 255, 255);
             tb_dbpwd.Location = new Point(146, 264);
             tb_dbpwd.Name = "tb_dbpwd";
             tb_dbpwd.Size = new Size(631, 16);
@@ -164,6 +166,7 @@
             // 
             tb_dbuser.BackColor = Color.FromArgb(21, 28, 30);
             tb_dbuser.BorderStyle = BorderStyle.None;
+            tb_dbuser.ForeColor = Color.FromArgb(0, 15, 255, 255);
             tb_dbuser.Location = new Point(146, 239);
             tb_dbuser.Name = "tb_dbuser";
             tb_dbuser.Size = new Size(631, 16);
