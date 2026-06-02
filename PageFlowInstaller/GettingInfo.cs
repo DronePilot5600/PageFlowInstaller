@@ -55,10 +55,10 @@ namespace PageFlowInstaller
 
                 using (StreamWriter sw = new StreamWriter(FilePath, false))
                 {
-                    sw.WriteLine("db_name=" + db_name);
-                    sw.WriteLine("sspi=" + sspi);
-                    sw.WriteLine("db_user=" + db_user);
-                    sw.WriteLine("db_pwd=" + db_pwd);
+                    sw.WriteLine(db_name);
+                    sw.WriteLine(sspi);
+                    sw.WriteLine(db_user);
+                    sw.WriteLine(db_pwd);
 
                     Debug.WriteLine("File Succesfully created");
                 }
