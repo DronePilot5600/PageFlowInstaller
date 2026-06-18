@@ -26,6 +26,7 @@ namespace PageFlowInstaller
             if(!File.Exists(FilePath))
             {
                 File.Create(FilePath);
+                
             }
 
             if (tb_pwd.TextLength < 5 || tb_pwd.Text != tb_pwd_rep.Text)
@@ -37,19 +38,31 @@ namespace PageFlowInstaller
             }
             else
             {
-                using (StreamWriter sw = new StreamWriter(FilePath, false))
+                try
                 {
-                    sw.WriteLine(uname);
-                    sw.WriteLine(pwd_tmp);
+                    using (StreamWriter sw = new StreamWriter(FilePath, false))
+                    {
+                        sw.WriteLine(uname);
+                        sw.WriteLine(pwd_tmp);
+
+                        sw.Flush();
+                    }
+
+
+
+                    Debug.WriteLine("Succesfully added AdminCreationFile");
+
+                    Finished_Succesfully nextstep = new Finished_Succesfully();
+                    nextstep.Show();
+                    this.Hide();
                 }
-
-                Debug.WriteLine("Succesfully added AdminCreationFile");
-
-                Finished_Succesfully nextstep = new Finished_Succesfully();
-                nextstep.Show();
-                this.Hide();
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ein unbekannter Fehler ist aufgetreten, bitte versuchen Sie es erneut");
+                    Environment.Exit(0);
+                }
         }
 
     }
+}
 }
